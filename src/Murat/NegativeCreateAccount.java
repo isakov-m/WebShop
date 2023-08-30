@@ -39,7 +39,6 @@ public class NegativeCreateAccount extends BaseDriver {
         //'The specified email already exists'
 
 
-
         BekleVeKapat();
 
 
