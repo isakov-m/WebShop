@@ -35,6 +35,8 @@ public class uye_girisiz_oy extends BaseDriver {
 
         WebElement vote= driver.findElement(By.cssSelector("input[id=\"vote-poll-1\"]"));
         vote.click();
+
+        MyFunc.Bekle(1);
 //
        WebElement error= driver.findElement(By.xpath("//*[@id='block-poll-vote-error-1']"));
 

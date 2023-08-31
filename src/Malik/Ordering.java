@@ -26,7 +26,7 @@ public class Ordering extends BaseDriver {
         WebElement loginBtn=driver.findElement(By.cssSelector("[value='Log in']"));
         loginBtn.click();
 
-        WebElement laptop=driver.findElement(By.xpath("(//img[@title='Show details for 14.1-inch Laptop'])[2]"));
+        WebElement laptop=driver.findElement(By.xpath("//img[@title='Show details for 14.1-inch Laptop']"));
         laptop.click();
 
         WebElement addToCart=driver.findElement(By.xpath("//input[@id='add-to-cart-button-31']"));

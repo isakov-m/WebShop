@@ -45,34 +45,39 @@ public class OrderHistoryDownload extends BaseDriver {
 
         WebElement LoginBtn= driver.findElement(login);
         LoginBtn.click();
+        MyFunc.Bekle(1);
 
         WebElement Account= driver.findElement(account);
         Account.click();
+        MyFunc.Bekle(1);
 
         WebElement Orders= driver.findElement(orders);
         Orders.click();
+        MyFunc.Bekle(1);
 
         SayfaAsagiKaydir();
+        MyFunc.Bekle(1);
 
         WebElement Details= driver.findElement(details);
         Details.click();
+        MyFunc.Bekle(1);
 
         WebElement Pdf= driver.findElement(pdfFile);
         Pdf.click();
-
+        MyFunc.Bekle(1);
 
         Robot robot=new Robot();
 
-        for (int i = 0; i < 27; i++) {
+        for (int i = 0; i < 26; i++) {
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
+            MyFunc.Bekle(1);
         }
         MyFunc.Bekle(2);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
-
-
+        BekleVeKapat();
 
     }
 }
