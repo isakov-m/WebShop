@@ -26,7 +26,7 @@ public class Ordering extends BaseDriver {
         WebElement loginBtn=driver.findElement(By.cssSelector("[value='Log in']"));
         loginBtn.click();
 
-        WebElement laptop=driver.findElement(By.xpath("//img[@title='Show details for 14.1-inch Laptop']"));
+        WebElement laptop=driver.findElement(By.xpath("(//img[@title='Show details for 14.1-inch Laptop'])[2]"));
         laptop.click();
 
         WebElement addToCart=driver.findElement(By.xpath("//input[@id='add-to-cart-button-31']"));
@@ -81,6 +81,7 @@ public class Ordering extends BaseDriver {
 
         WebElement continue2=driver.findElement(By.xpath("(//input[@class='button-1 new-address-next-step-button'])[1]"));
         continue2.click();
+        MyFunc.Bekle(2);
 
         WebElement inStorePickup=driver.findElement(By.id("PickUpInStore"));
         inStorePickup.click();
@@ -89,12 +90,16 @@ public class Ordering extends BaseDriver {
 
         WebElement continue3=driver.findElement(By.xpath("(//input[@class='button-1 new-address-next-step-button'])[2]"));
         continue3.click();
+        MyFunc.Bekle(2);
 
-        WebElement continue4=driver.findElement(By.cssSelector("[class='button-1 payment-method-next-step-button']"));
+        WebElement continue4=driver.findElement(By.cssSelector("[onclick='PaymentMethod.save()']"));
         continue4.click();
 
-        WebElement continue5=driver.findElement(By.cssSelector("[class='button-1 payment-info-next-step-button']"));
+        MyFunc.Bekle(2);
+
+        WebElement continue5=driver.findElement(By.cssSelector("[onclick='PaymentInfo.save()']"));
         continue5.click();
+        MyFunc.Bekle(3);
 
         WebElement total=driver.findElement(By.cssSelector("[class='product-subtotal']"));
 
@@ -111,8 +116,9 @@ public class Ordering extends BaseDriver {
 
         Assert.assertTrue(toplamFiyat==doubleTotalFee,"Urun fiyatiyla ek odemelerin fiyatinin toplami Toplam odenecek fiyata esit degil.");
 
-        WebElement continue6=driver.findElement(By.cssSelector("[class='button-1 confirm-order-next-step-button']"));
-        continue6.click();
+        WebElement confirm=driver.findElement(By.cssSelector("[class='button-1 confirm-order-next-step-button']"));
+        confirm.click();
+        MyFunc.Bekle(2);
 
         WebElement success=driver.findElement(By.xpath("//strong[text()='Your order has been successfully processed!']"));
 
@@ -121,17 +127,6 @@ public class Ordering extends BaseDriver {
 
         BekleVeKapat();
 
-
-
-
-
-
-
-
-
-
-
-        MyFunc.Bekle(2);
 
 
 
