@@ -30,7 +30,7 @@ public class OrderHistoryDownload extends BaseDriver {
 
     @Test
 
-    public void orderHistoryDownload() throws AWTException {
+    public void orderHistoryDownloaD() throws AWTException {
 
         driver.get("https://demowebshop.tricentis.com/");
 
