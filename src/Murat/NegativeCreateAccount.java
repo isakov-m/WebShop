@@ -44,7 +44,7 @@ public class NegativeCreateAccount extends BaseDriver {
 
 
 
-       // BekleVeKapat();
+        BekleVeKapat();
 
 
 
