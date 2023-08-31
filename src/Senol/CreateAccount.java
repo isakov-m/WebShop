@@ -37,7 +37,7 @@ public class CreateAccount extends BaseDriver {
         lastName.sendKeys("Dogan");
 
         WebElement eMail = driver.findElement(mail);
-        eMail.sendKeys("senoldogan2018@gmail.com");
+        eMail.sendKeys("senoldogan2@gmail.com");
 
         WebElement password = driver.findElement(pswd);
         password.sendKeys("Senol1988++");
@@ -49,6 +49,7 @@ public class CreateAccount extends BaseDriver {
         registerButton.click();
 
 
+        BekleVeKapat();
 
     }
 }
