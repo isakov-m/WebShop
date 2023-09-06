@@ -3,6 +3,7 @@ package Utlity;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -21,9 +22,9 @@ public class BaseDriver {
 
 
         //driver=new FirefoxDriver();
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         //driver= new SafariDriver();
-        //driver =new EdgeDriver();
+        driver =new EdgeDriver();
         driver.manage().window().maximize(); // Ekranı max yapıyor.
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));  // 20 sn mühlet: elementi bulma mühleti
